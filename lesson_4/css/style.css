@@ -1,0 +1,88 @@
+@import url("reset.css");
+
+* {
+  color: rgb(70, 44, 44);
+}
+/* ----------------header--------------- */
+header {
+  color: rgb(36, 225, 19);
+}
+.header-title-text {
+  color: red;
+}
+.header-nav .header-nav-list {
+  color: aquamarine;
+}
+.header-nav-list * {
+  color: black;
+}
+.header-nav-list + li {
+  color: rgb(36, 225, 19);
+}
+/* -----------------------main-------------- */
+main {
+  color: rgb(188, 17, 17);
+}
+.main-container {
+  color: rgb(205, 225, 48);
+}
+.main-container h2 {
+  color: black;
+}
+
+p.text {
+  color: blue;
+}
+
+.content-beginning-hystory .beginning-hystory-title {
+  color: red;
+}
+
+.beginning-hystory-text p {
+  color: pink;
+}
+
+.content-first-clubs.first-clubs {
+  color: rgb(24, 231, 16);
+}
+.content-first-clubs + div {
+  color: brown;
+}
+
+#modern-competitions {
+  color: brown;
+}
+#modern-competitions .modern-competitions-title {
+  color: blue;
+}
+.modern-competitions-text .text {
+  color: bisque !important;
+}
+
+/* ----реклама---- */
+[class*="-price"] {
+  color: rgb(255, 255, 0);
+}
+
+.content-first-clubs ~ div {
+  color: rgb(153, 92, 92);
+}
+
+/* ----топ клубів---- */
+.clubs-text-info ~ p {
+  color: red;
+}
+.clubs-text-info + p {
+  color: blue;
+}
+
+/* ------------------------footer------------------- */
+footer {
+  color: rgb(19, 77, 223);
+}
+.footer-list li {
+  color: aquamarine;
+}
+.footer-list > li {
+  color: blue;
+}
