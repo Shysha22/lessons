@@ -1,0 +1,109 @@
+
+@import url(reset.css);
+/* підключення через google fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merienda:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Poppins:ital,wght@0,400;0,500;0,600;1,200&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* підключення через плагін */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+
+/* підключення локально */
+@font-face {
+    font-family: "NightPumpkind";
+    src:
+         url("../fonts/night-pumpkind/NightPumpkind-1GpGv.woff2") format(woff2),
+         url("../fonts/night-pumpkind/NightPumpkind-1GpGv.woff") format(woff);
+        font-display: swap;
+}
+
+body{
+    font-family: "Inter",serif;
+    color: #7D7D7D;
+    font-size: 18px;
+    font-style: normal;
+}
+h1,h2,h3{
+    font-family: "Poppins",serif;
+}
+
+.text {
+    color: #7D7D7D;
+    font-weight: 400;
+}
+.list{
+    font-weight: 500;
+}
+
+
+/* -----------------------------block 1 content-business------------------ */
+
+.business-title {
+    font-family: "Poppins",serif;
+    font-size: 35px;
+    font-weight: 600;
+    text-shadow: 3px 7px 9px #000;
+    color:#000;
+    text-align: center;
+    
+}
+.business-text-one p{
+    text-align: left;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.2;
+}
+.business-text-two p{
+    line-height: 1.2;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.business-subtitle {
+    color: #6B77E5;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 3px 10px 15px #000000;
+    text-align: left;
+    text-decoration: underline;
+}
+
+/* ---------------------------block2 container-information------------------------ */
+.information-title {
+    color: #37393F;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.information-text-one p{
+    text-indent: 20px;
+    white-space: normal;
+    font-style: italic;
+}
+
+.information-list {
+   font-family: "NightPumpkind",serif;
+   color:red;
+   text-align: start;
+   text-transform: capitalize;
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 1.4;
+}
+.information-text-two {
+    word-spacing: 10px;
+    font-style: oblique;
+}
+.information-list-numbering {
+   color:rgb(31, 39, 197);
+   text-align: left;
+   text-transform: uppercase;
+   font-weight: 600;
+   line-height: 1.4;
+  
+}
+.information-text-three{
+    letter-spacing: 2px;
+}
+.information-text-three span{
+    text-decoration: line-through;
+}
