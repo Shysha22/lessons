@@ -1,5 +1,4 @@
 
-@import url(reset.css);
 /* підключення через google fonts */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merienda:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Poppins:ital,wght@0,400;0,500;0,600;1,200&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -13,13 +12,16 @@
          url("../fonts/night-pumpkind/NightPumpkind-1GpGv.woff2") format(woff2),
          url("../fonts/night-pumpkind/NightPumpkind-1GpGv.woff") format(woff);
         font-display: swap;
+        font-weight: 400;
+        font-style: normal;
 }
+
+@import url(reset.css);
 
 body{
     font-family: "Inter",serif;
     color: #7D7D7D;
     font-size: 18px;
-    font-style: normal;
 }
 h1,h2,h3{
     font-family: "Poppins",serif;
