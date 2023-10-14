@@ -1,0 +1,329 @@
+
+@import url(fonts.css);
+
+
+@import url(reset.css);
+
+
+body{
+    width: 100%;
+    font-family: "Inter",serif;
+    font-weight: 400;
+}
+
+
+
+.main {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+/* ------------------------стилі для блока 1 -------------------------*/
+
+/* встановлюю шрифт для заголовків */
+.section-title,
+.sub-section p,
+.information-title{
+    font-family: "Poppins",serif;
+}
+
+.container-licencing {
+    margin: 150px 0;
+}
+.licencing-subtitle-box {
+    max-width: 210px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+.subtitle-box {
+    width: 12px;
+    height: 12px;
+    background-color:#40DDB6;
+    display: inline-block;
+    box-shadow: 0 0 3px 5px #40DDB6;
+    border: 1px solid #506d65;
+    margin-right: 5px;
+}
+.licencing-subtitle {
+    color: #37393F;
+    font-family: "Inter",serif;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 1px solid #000;
+}
+.licencing-title {
+    color: #37393F;
+    text-align: center;
+    font-family: "Poppins",serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 70px;
+}
+/* проаналізувавши макет побачив що багато схожих стилів тому вирішив зробити деякі універсальні класи для зменшення повторення коду */
+.licencing-section{
+    margin-bottom: 100px;
+}
+.section-title{
+    color: #37393F;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+.section-text{
+    color: #7D7D7D;
+    font-size: 18px;
+    line-height: 1.4;
+}
+s
+.sub-section p{
+    color: #37393F;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.sub-section-link{
+    color: #40DDB6;
+    font-size: 30px;
+    font-weight: 400;
+}
+.sub-section-list-img{
+    color: #40DDB6;
+    font-size: 18px;
+    line-height: 1.3
+}
+
+.graphics-text{
+    margin-bottom:32px ;
+}
+.photography-text{
+    margin-bottom: 24px;
+}
+.pexels {
+    margin-bottom: 24px;
+}
+.fonts-link{
+    font-size: 18px;
+    font-weight: 500;
+}
+/* ---------------------------------------------- */
+/* ----------стилі для блока 2----------------------------- */
+
+.container-information {
+    max-width: 830px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.information-title {
+    color: #37393F;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2; 
+    margin-bottom: 13px;
+}
+.information-text {
+    color: #7D7D7D;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.information-text-distinctively {
+    margin-bottom: 40px;
+}
+.information-text-quickly {
+    margin-bottom: 35px;
+}
+.quickly-list {
+    padding-left: 30px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.quickly-list li,.compellingly-list li{
+    max-width: 50%;
+    margin-top: 35px;
+    border-bottom: 1px dashed #000;
+}
+.information-text-compellingly {
+    margin-bottom: 35px;
+}
+.compellingly-list {
+    padding-left: 30px;
+    margin-bottom: 35px;
+}
+/* ------------------------------------------------- */
+/*------------------------ стилі блок 3 *-------------------------*/
+
+.container-jewels {
+    max-width: 1600px;
+    margin-bottom: 100px;
+}
+.jewels-content {
+    max-width: 1150px;
+    margin: 0 auto;
+    font-family:"Cormorant Infant",serif;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 20px 0 ;
+
+}
+/* подумати */
+.jewels-content-text {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 70px;
+    max-width: 500px;
+    margin-right:75px;
+}
+.jewels-subtitle {
+    color: #D58417;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+}
+.jewels-title {
+    color: #000;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.jewels-text {
+    color: #606060;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.jewels-content-img {
+    vertical-align: top;
+    display: inline-block;
+}
+.jewels-img-first {
+    display: inline-block;
+    vertical-align:middle;
+    border-radius: 235px;
+    border: 1px solid #502203;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+.jewels-img-first img{
+    margin: 15px 10px 0 0;
+}
+.jewels-img-second {
+    display: inline-block;
+    vertical-align:middle;
+    border-radius: 235px;
+    border: 1px solid #502203;
+}
+.jewels-img-second img{
+    margin: 20px 11px 0 0;
+}
+/* -----------------------------стилі блок 4------------------------ */
+.container-clothing {
+    max-width: 1240px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.clothing-content{
+    padding: 0 20px;
+    color: #807D7E;
+    font-family: "Causten",serif;
+}
+
+.clothing-title {
+    font-family: "Core Sans C",serif;
+    color: #3C4242;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.56px;
+    margin-bottom: 20px;
+}
+.clothing-subtitle-collection,
+.clothing-subtitle-destination {
+    color: #807D7E;
+    font-family: "Core Sans C",serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+}
+.clothing-subtitle-destination{
+    margin-bottom: 20px;
+}
+.clothing-collection-text,
+.clothing-popylarity-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+}
+.clothing-collection-text p,
+.clothing-popylarity-text p  {
+    margin-bottom: 20px;
+}
+.text-euphoria {
+    font-weight: 700;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 5px;
+}
+.clothing-see-more a {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+}
+
+/* блок 5----------------------- */
+
+.experiments {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+.experiments-content {
+    border-radius: 100px 0 100px 0;
+    border : 2px dotted #000;
+    min-height: 400px;
+}
+
+.block-one {
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+    border:10px solid yellow;
+    background-color:#000;
+    box-shadow : 0 0 15px 12px yellow,
+                 0 0 15px 14px rgb(255, 0, 0)  ;
+    opacity:0.7;
+    margin-bottom: 50px;
+
+}
+.block-two {
+    width: 150px;
+    height: 50px;
+    border:2px dashed #000;
+    text-align: center;
+    margin-left: 10px;
+    border-radius:40px;
+    box-shadow: inset 2px 2px 5px 5px #034,
+                2px 2px 5px 5px rgb(237, 69, 69);
+    margin-bottom: 50px;
+}
+.block-two a{
+    display: inline-block;
+    margin-top: 10%;
+    color:red;
+    opacity: 0.5;
+}
+.block-three {
+    width: 100px;
+    height: 100px;
+    background-color:red;
+    border-radius: 50%
+}
