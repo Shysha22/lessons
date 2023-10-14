@@ -1,0 +1,320 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	/* 
+	font-family: "Inter", sans-serif;
+	color: #7d7d7d;
+	font-size: 18px;
+	 */
+}
+
+/* ======================================================== */
+/* ---------------------- Практика ------------------------ */
+/* ======================================================== */
+
+/* 
+.block {
+	padding: 50px 15px;
+	max-width: 722px;
+	margin: 0 auto;
+}
+.image {
+	margin-bottom: 37px;
+}
+
+.image,
+.image-benefits {
+	max-width: 100%;
+}
+.title,
+.sub-title,
+.title-benefits,
+.sub-title-benefits {
+	font-family: "Poppins", sans-serif;
+}
+
+.title {
+	color: #37393f;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.27;
+	margin-bottom: 12.5px;
+}
+.text {
+	line-height: 1.46;
+	margin-bottom: 40px;
+}
+.text p {
+	margin-bottom: 15px;
+}
+.sub-title {
+	color: #6b77e5;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.27;
+	margin-bottom: 12px;
+}
+.benefits {
+	font-size: 0;
+	margin-bottom: 48px;
+}
+.image-benefits {
+	width: 331px;
+	margin-right: 29px;
+}
+.content-benefits {
+	display: inline-block;
+	width: 332px;
+	font-size: 18px;
+}
+.title-benefits {
+	color: #37393f;
+	font-size: 25px;
+	line-height: 1.27;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.sub-title-benefits {
+	color: #40ddb6;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.27;
+	margin-bottom: 23.5px;
+}
+.list-benefits li {
+	margin-bottom: 35px;
+}
+ */
+
+/* ======================================================== */
+/* ---------- CSS-властивості оформлення блоків ----------- */
+/* ======================================================== */
+
+main {
+	padding: 30px;
+}
+
+.block {
+	background-color: #77608d;
+}
+.inline {
+	background-color: #7a956b;
+}
+.inline-block {
+	background-color: #794f45;
+}
+
+/*
+border 
+Універсальна властивість встановлює товщину,
+стиль та колір границі навколо елемента 
+Властивість не успадковується
+border: товщина стиль колір;
+Основні стили - solid dotted dashed double
+*/
+
+.block {
+	/* border: 10px solid red; */
+	/* border: 10px solid transparent; */
+	/* border: 5px solid yellow; */
+
+	padding: 15px;
+	width: 300px;
+
+	/* 
+	border-top: 50px solid #000;
+	border-right: 20px dashed red;
+	border-bottom: 30px solid #000;
+	border-left: 10px dashed green;
+	 */
+}
+.block p {
+}
+
+/* Властивість border успадковує колір шрифту  */
+/* 
+.block a {
+	color: yellow;
+	border-bottom: 2px dotted;
+}
+ */
+
+/* 
+.block:hover {
+	border: 5px solid transparent;
+}
+ */
+
+.inline {
+	/* border: 5px solid red; */
+}
+
+.inline-block {
+	/* border: 5px solid red; */
+}
+
+/*
+outline 
+Універсальна властивість встановлює товщину,
+стиль та колір обводки навколо елемента 
+Властивість не успадковується
+*/
+
+.block {
+	/* outline: 1px solid red; */
+}
+.inline {
+	/* outline: 10px solid red; */
+}
+.inline-block {
+	/* outline: 10px solid red; */
+}
+/* 
+.block a {
+	color: yellow;
+}
+.block a:focus {
+	outline: 1px dotted yellowgreen;
+}
+ */
+
+/*
+border-radius
+Встановлює радіус заокруглення кутів блоку. 
+Властивість не успадковується
+*/
+
+/* 
+.block {
+	border-radius: 20px;
+}
+.inline {
+	border-radius: 20px;
+}
+.inline-block {
+	border-radius: 20px;
+}
+ */
+
+/* Коло */
+/* 
+.circle {
+	width: 300px;
+	height: 300px;
+	background-color: yellowgreen;
+	border-radius: 50%;
+}
+ */
+
+/*
+box-shadow
+Додає тінь до елементу
+Властивість не успадковується
+box-shadow: зсув_по_гориз зсув_по_верт радіус(розмиття) розмір колір
+inset - тінь в середені об'єкту
+*/
+
+.block {
+	/* 
+	box-shadow:
+		5px 5px 20px 5px #000,
+		-5px -5px 20px 5px red;
+	*/
+	/* box-shadow: inset 0 0 15px 1px #000; */
+	/* margin-bottom: 20px; */
+}
+.inline {
+	/* box-shadow: 0 0 15px 1px #000; */
+}
+.inline-block {
+	/* box-shadow: 0 0 15px 1px #000; */
+}
+
+/*
+opacity
+Встановлює рівень прозорості елемента
+Властивість не успадковується
+0 - повна прозорість
+1 - повна непрозорість (за замовченням)
+0.5 - прозорість 50%
+*/
+
+.block {
+	/* opacity: 0.5; */
+}
+
+.inline {
+	/* opacity: 0.5; */
+}
+.inline-block {
+	/* opacity: 0.5; */
+}
+
+/* Властивість не успадковується  */
+/*
+.block p {
+	opacity: 1;
+}
+*/
+
+/*
+visibility
+Управляє відображенням елемента
+visible - (за замовченням) відображає об'єкт
+hidden - ховає об'єкт (з об'єктом не можна взаємодіяти)
+*/
+
+.block {
+	/* visibility: hidden; */
+}
+.inline {
+}
+.inline-block {
+}
+
+/* 
+Різниця між:
+visibility: hidden; - припиняє взаємодію з об'єктом
+opacity: 0; - робить об'єкт прозорим
+display: none; - не завантажує об'єкт в браузер
+*/
+
+.block {
+	/* opacity: 0; */
+	/* visibility: hidden; */
+	/* display: none; */
+}
+
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid red;
+	border-bottom: 50px solid transparent;
+}
+.arrow-top {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
+.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-right: 100px solid red;
+	border-bottom: 50px solid transparent;
+}
+.arrow-bottom {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid red;
+}
