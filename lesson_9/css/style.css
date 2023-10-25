@@ -1,0 +1,767 @@
+@import url(fonts.css);
+
+@import url(reset.css);
+
+
+body {
+  font-family: "Inter", serif;
+}
+/* хедер------------- */
+.header {
+  width: 100%;
+  min-height: 100px;
+  padding: 30px 0;
+  background-color: aqua;
+}
+.header-title {
+  text-align: center;
+  font-family: "Core Sans C", serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/*  меін------------------------------ */
+.main {
+  width: 100%;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  min-height: 650px;
+}
+
+/* меін навігація------------------------------------ */
+.main-navigation {
+  padding-top: 50px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.main-navigation a {
+  display: inline-block;
+  min-width: 400px;
+  min-height: 290px;
+  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+.main-navigation a:not(:last-child) {
+  margin-right: 40px;
+}
+.main-navigation a:hover {
+  box-shadow: 0 10px 10px 10px #000;
+}
+.main-navigation a:hover::before {
+  background: #837a7a;
+  color: #fff;
+}
+.game {
+  background: url("../img/game-img.jpg") center / contain no-repeat;
+}
+.game::before {
+  content: "гра";
+  display: inline-block;
+  margin-top: 50%;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+  max-width: 80%;
+  color: rgb(231, 112, 22);
+  background: #cec5c5;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.base-conteiner-link {
+  background: url("../img/main-img.jpg") center / cover no-repeat;
+}
+.base-conteiner-link::before {
+  content: "основний контент";
+  display: inline-block;
+  margin-top: 50%;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+  max-width: 80%;
+  color: rgb(231, 112, 22);
+  background: #cec5c5;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.experiments-container-link {
+  background: url("../img/exp-img.jpg") center / cover no-repeat;
+}
+.experiments-container-link::before {
+  content: "експеременти";
+  display: inline-block;
+  margin-top: 50%;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+  max-width: 80%;
+  color: rgb(231, 112, 22);
+  background: #cec5c5;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* -------------гра--------------------------- */
+.game-container {
+  border-top: 2px solid #000;
+  max-width: 100%;
+  padding-top: 50px;
+  display: none;
+}
+.game-container:target {
+  display: block;
+}
+.game-info {
+  padding: 50px 70px;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  background-color: antiquewhite;
+  box-shadow: 0 0 20px 20px antiquewhite;
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+.game-title {
+  font-size: 30px;
+  font-weight: "Core Sans C", serif;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.game-description {
+  font-size: 20px;
+  font-weight: "Causten", serif;
+  font-weight: 600;
+}
+.game-field {
+  background: url("../img/game.png") center / cover no-repeat;
+  width: 900px;
+  box-shadow: 0 0 20px 10px rgb(74, 58, 58);
+  overflow: hidden;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+.start-line {
+  width: 90px;
+  height: 60px;
+  background: rgba(131, 122, 122, 0.463);
+}
+.line-2 {
+  width: 450px;
+  height: 60px;
+  margin: -2% 0 0 0;
+  border-radius: 0 40px 0 0;
+}
+.line-3 {
+  width: 72px;
+  height: 180px;
+  margin: -2% 0 0 42%;
+}
+.line-4 {
+  width: 360px;
+  height: 42px;
+  margin-left: 42%;
+  border-radius: 0 20px 0 0;
+}
+.line-5 {
+  width: 54px;
+  height: 180px;
+  margin-left: 76%;
+  border-radius: 0 0 20px 0;
+}
+.line-6 {
+  width: 450px;
+  height: 24px;
+  margin-left: 29%;
+  border-radius: 0 0 20px 50px;
+}
+.line-7 {
+  width: 27px;
+  height: 120px;
+  margin: -15% 0 0 27%;
+  border-radius: 0 20px 0 50px;
+}
+.line-8 {
+  width: 180px;
+  height: 14px;
+  margin: -14% 0 0 10%;
+}
+.line-9 {
+  width: 12px;
+  height: 192px;
+  margin: 0 0 0 10%;
+}
+[class*="line-"],
+.container-victory {
+  background: rgba(131, 122, 122, 0.463);
+  border: 1px solid #000;
+  visibility: hidden;
+}
+.line-finish {
+  width: 18px;
+  height: 20px;
+  background: #f60909;
+  margin: 0 0 0 9.5%;
+}
+.container-victory {
+  margin: -5px 0 0 65px;
+  width: 60px;
+  padding: 30px 0;
+  box-shadow: 0 0 10px 10px yellow;
+  background: url("../img/treasure-chest.png") center / cover no-repeat;
+}
+
+.start-line:hover ~ .line-2 {
+  visibility: visible;
+}
+.line-2:hover {
+  visibility: visible;
+}
+.line-2:hover ~ .line-3,
+.line-3:hover {
+  visibility: visible;
+}
+.line-3:hover ~ .line-4,
+.line-4:hover {
+  visibility: visible;
+}
+.line-4:hover ~ .line-5,
+.line-5:hover {
+  visibility: visible;
+}
+.line-5:hover ~ .line-6,
+.line-6:hover {
+  visibility: visible;
+}
+.line-6:hover ~ .line-7,
+.line-7:hover {
+  visibility: visible;
+}
+.line-7:hover ~ .line-8,
+.line-8:hover {
+  visibility: visible;
+}
+.line-8:hover ~ .line-9,
+.line-9:hover {
+  visibility: visible;
+}
+.line-9:hover ~ .line-finish,
+.line-finish:hover {
+  visibility: visible;
+}
+.line-finish:hover ~ .container-victory,
+.container-victory:hover {
+  visibility: visible;
+}
+
+/* -----------------верстка макетів------------------------- */
+
+/* блок 1---------------- */
+.businness-title,
+.benefits-title,
+.benefits-subtitle,
+.questions-title,
+.questions-text-box {
+  font-family: "Poppins", serif;
+}
+.businness-text-box,
+.benefits-list li {
+  font-family: "Inter", serif;
+}
+.bace-container {
+  display: none;
+  color: #7d7d7d;
+}
+.bace-container:target {
+  display: block;
+}
+.container-international-business {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 25px;
+  margin-bottom: 100px;
+}
+.businness-title {
+  color: #37393f;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.businness-text-box {
+  margin-bottom: 40px;
+  color: #7d7d7d;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.businness-title {
+  color: #37393f;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.businness-text-completely {
+  margin-bottom: 42px;
+}
+.businness-subtitle {
+  color: #40ddb6;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.businness-text-customer {
+  margin-bottom: 40px;
+}
+.businness-benefits {
+  margin-bottom: 50px;
+}
+.businness-benefits div {
+  display: inline-block;
+  vertical-align: top;
+}
+/* подумати над розміром */
+.benefits-img img {
+  min-height: 265px;
+}
+.benefits-content {
+  width: 50%;
+  padding-left: 30px;
+}
+.benefits-title {
+  color: #37393f;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.benefits-subtitle {
+  color: #40ddb6;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 23px;
+}
+.benefits-list li {
+  color: #7d7d7d;
+  font-size: 18px;
+}
+.benefits-list li:not(:last-child) {
+  margin-bottom: 35px;
+}
+.benefits-list li::before {
+  content: "";
+  display: inline-block;
+  margin: 0 10px -5px 0;
+  width: 27px;
+  height: 28px;
+  background: url("../img/Vectorcheck-mark.svg") 0 0 / cover no-repeat;
+}
+.questions-title {
+  color: #37393f;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.questions-text-box {
+  color: #7d7d7d;
+  font-size: 18px;
+  line-height: 1.4;
+}
+/* блок 2--------------------- */
+.care-title,
+.vision-title,
+.mission-title {
+  font-family: "Poppins", serif;
+}
+.container-care {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #37393f;
+  font-family: "Inter", serif;
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+.subtitle {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.subtitle::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../img/green-box.jpg") center / cover no-repeat;
+  margin: 0 5px 0 0;
+}
+.care-title {
+  color: #37393f;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.care-text {
+  margin-bottom: 50px;
+}
+.care-text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+.care-duties {
+  margin-bottom: 50px;
+}
+/* на випадок якщо добавиться ще одна коробочка */
+.care-duties div:not(:last-child) {
+  margin-bottom: 30px;
+}
+.duties-vision,
+.duties-mision {
+  border: 1px solid #e3e3e3;
+  padding: 28px 40px;
+}
+.vision-title,
+.mision-title {
+  display: inline-block;
+  color: #37393f;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.duties-vision::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("../img/Vectorcheck-mark.svg") center / cover no-repeat;
+  margin: 0 18px -3px 0;
+}
+.duties-mision::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("../img/Vectorcheck-mark.svg") center / cover no-repeat;
+  margin: 0 18px -3px 0;
+}
+.vision-text,
+.mision-text {
+  font-size: 18px;
+  line-height: 1.4;
+  padding-left: 50px;
+}
+.more-about {
+  display: inline-block;
+  padding: 22px 35px;
+  background: #6b77e5;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.more-about:hover {
+  background: #ececec;
+  color: #000;
+  outline: 1px solid #000;
+}
+/* блок 3-------------------------------------- */
+.work-title,
+.orientation-title {
+  font-family: "Poppins", serif;
+}
+.container-work {
+  max-width: 1227px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.work-subtitle {
+  text-align: center;
+}
+.work-title {
+  color: #37393f;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 77px;
+}
+.work-orientations > div {
+  display: inline-block;
+  background: #f4f4f4;
+  max-width: 386px;
+  text-align: center;
+  padding: 58px 43px;
+}
+.work-orientations div:not(:last-child) {
+  margin-right: 30px;
+}
+.orientation-title {
+  color: #37393f;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.orientation-text {
+  margin-bottom: 37px;
+}
+.orientation-text p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.testimonials {
+  color: #6b77e5;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.testimonials:hover {
+  color: grey;
+  border-bottom: 1px solid grey;
+}
+.orientation-appointment::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url("../img/Icondata.svg") center / cover no-repeat;
+  margin: -95px auto 22px;
+}
+.orientation-consultation::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url("../img/Iconconsultation.svg") center / cover no-repeat;
+  margin: -95px auto 22px;
+}
+.orientation-service::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url("../img/Iconservice.svg") center / cover no-repeat;
+  margin: -95px auto 22px;
+}
+/* блок 4-------------------------------- */
+.container-create-jewels {
+  font-family: "Cormorant Infant", serif;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+.jewels-title {
+  display: inline-block;
+  color: #000;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 490px;
+}
+.jewels-title::after {
+  content: "";
+  display: block;
+  width: 62%;
+  height: 2px;
+  border-top: 3px solid #78473b;
+  margin-top: 10px;
+}
+.jewellery-collection {
+  display: inline-block;
+}
+.jewellery-collection > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.jewellery-collection > div:not(:last-child) {
+  margin-right: 55px;
+}
+/* відступив щоб випівняти блок по макету по макету */
+/* звертаюсь > тіки до дівів обгорток */
+.jewellery-collection > div:first-child {
+  margin-top: -100px;
+}
+.jewels-card-two-title {
+  color: #000;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 329px;
+  margin-bottom: 31px;
+}
+
+.jewels-card-img {
+  display: inline-block;
+  border: 1px solid #000;
+  margin-bottom: 34px;
+}
+.jewels-card-img img {
+  margin: 9px -10px -9px 10px;
+}
+.jewels-card-img:hover .card-img {
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+  margin: 0px;
+}
+.jewels-decription {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+.jewels-price {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* блок експеременти --------------------------------- */
+
+.experiments-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+  padding-top: 100px;
+}
+.experiments-container:target {
+  display: block;
+}
+.experiment-one {
+  margin-bottom: 100px;
+}
+.experiment-one div {
+  display: inline-block;
+}
+
+.experiment-one div:not(:last-child) {
+  margin-right: 50px;
+}
+.experiment-one div:nth-child(even) {
+  background: #f28609;
+  box-shadow: 0 0 10px 3px #f28609;
+}
+.experiment-one div:nth-child(odd) {
+  background: #64c91b;
+  box-shadow: 0 0 10px 3px #64c91b;
+}
+.experiment-one div:nth-child(odd):hover {
+  background: #f90404;
+  box-shadow: 0 0 20px 5px #f90404;
+}
+.experiment-one div:nth-child(even):hover {
+  background: #005eff;
+  box-shadow: 0 0 20px 5px #005eff;
+}
+.ball {
+  width: 100px;
+  height: 140px;
+  border-radius: 49% 51% 49% 51% / 36% 39% 61% 64%;
+  cursor: pointer;
+}
+.ball::after {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 3px;
+  background-color: #000;
+  margin: 142% 0 0 48%;
+}
+.experiment-two {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.experiment-two a:not(:last-child) {
+  margin-bottom: 20px;
+}
+.btn {
+  display: block;
+  max-width: 200px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+.flying-btn1 {
+  background: #6b77e5;
+}
+.flying-btn1:hover {
+  margin-left: 80%;
+}
+.flying-btn2 {
+  background: #2cd809;
+}
+.flying-btn2:hover {
+  visibility: hidden;
+}
+.flying-btn3 {
+  background: #0caad1;
+}
+.flying-btn3:focus {
+  background: #104a59;
+}
+.flying-btn4 {
+  background: #f0d90a;
+}
+.flying-btn4:visited {
+  background: grey;
+}
+.experiment-two-three {
+  width: 100px;
+  height: 100px;
+}
+.experiment-three {
+}
+.before {
+  display: block;
+  width: 300px;
+  padding: 30px 50px;
+  background: #40ddb6;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.before::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px -4px 0;
+  background: url("../img/icon-icons.com_74620.svg") center / cover no-repeat;
+}
+.after {
+  display: block;
+  width: 300px;
+  padding: 30px 50px;
+  background: #b84c08;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.after::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 -7px 10px;
+  background: url("../img/arrow-front-go_80452.svg") center / cover no-repeat;
+}
+
+/* футер--------------------------------------- */
+.footer {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background: #837a7a;
+}
+.footer-title {
+  font-size: 30px;
+}
