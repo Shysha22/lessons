@@ -2,7 +2,6 @@
 
 @import url(reset.css);
 
-
 body {
   font-family: "Inter", serif;
 }
@@ -126,13 +125,13 @@ body {
 }
 .game-title {
   font-size: 30px;
-  font-weight: "Core Sans C", serif;
+  font-family: "Core Sans C", serif;
   font-weight: 800;
   margin-bottom: 20px;
 }
 .game-description {
   font-size: 20px;
-  font-weight: "Causten", serif;
+  font-family: "Causten", serif;
   font-weight: 600;
 }
 .game-field {
@@ -318,6 +317,7 @@ body {
 }
 .businness-benefits {
   margin-bottom: 50px;
+  font-size: 0;
 }
 .businness-benefits div {
   display: inline-block;
@@ -325,11 +325,14 @@ body {
 }
 /* подумати над розміром */
 .benefits-img img {
+  max-width: 335px;
   min-height: 265px;
 }
+.benefits-img {
+  margin-right: 30px;
+}
 .benefits-content {
-  width: 50%;
-  padding-left: 30px;
+  width: 47%;
 }
 .benefits-title {
   color: #37393f;
@@ -491,6 +494,10 @@ body {
 }
 .work-orientations > div {
   display: inline-block;
+  padding-top: 40px;
+}
+.appointment-content,.consultation-content,.service-content{
+  display: inline-block;
   background: #f4f4f4;
   max-width: 386px;
   text-align: center;
@@ -524,15 +531,15 @@ body {
   color: grey;
   border-bottom: 1px solid grey;
 }
-.orientation-appointment::before {
+.appointment-content::before {
   content: "";
-  display: block;
+  display:block;
   width: 72px;
   height: 72px;
   background: url("../img/Icondata.svg") center / cover no-repeat;
   margin: -95px auto 22px;
 }
-.orientation-consultation::before {
+.consultation-content::before {
   content: "";
   display: block;
   width: 72px;
@@ -540,7 +547,7 @@ body {
   background: url("../img/Iconconsultation.svg") center / cover no-repeat;
   margin: -95px auto 22px;
 }
-.orientation-service::before {
+.service-content::before {
   content: "";
   display: block;
   width: 72px;
@@ -756,7 +763,7 @@ body {
 }
 
 /* футер--------------------------------------- */
-.footer {
+.footer-container {
   width: 100%;
   padding: 50px 0;
   text-align: center;
