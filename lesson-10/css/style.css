@@ -1,0 +1,13 @@
+@import url("reset.css");
+
+body{
+    background: rgb(149, 165, 149);
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+p{
+    margin-bottom: 30px;
+}
