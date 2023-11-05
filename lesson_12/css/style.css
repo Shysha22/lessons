@@ -6,7 +6,7 @@
 .wrapper {
   min-width: 100%;
   overflow: clip;
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 [class*="__container"] {
   max-width: 1220px;
@@ -183,6 +183,7 @@
   width: 100%;
 }
 .card-member-team__info {
+  width: 88.4%;
   position: absolute;
   padding: 25px 70px;
   background: #fff;
@@ -209,12 +210,19 @@
   position: absolute;
   visibility: hidden;
   top: 45%;
-  left: 29%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
 }
 .media-social {
 }
 .media-social__link {
   display: inline-block;
+}
+.media-social__link img {
+  max-width: 50px;
+  max-height: 50px;
 }
 .media-social__link:not(:last-child) {
   margin-right: 10px;
@@ -229,11 +237,11 @@
   position: relative;
   padding: 30px 0;
 }
-.title-section{
+.title-section {
   text-align: center;
   font-size: 24px;
   padding: 30px 0;
-  background-color:#998484;
+  background-color: #998484;
   font-weight: 700;
   position: sticky;
   top: 106px;
@@ -241,49 +249,46 @@
 }
 .text-container {
   padding: 20px 10px;
-  background-color:rgb(246, 227, 189);
+  background-color: rgb(246, 227, 189);
   border-radius: 0 0 20px 20px;
 }
-.text-container p:not(:last-child){
+.text-container p:not(:last-child) {
   margin-bottom: 20px;
-} 
-.experiment-two{
+}
+.experiment-two {
   padding: 30px 0;
 }
 /* ------3 експеремнт---- */
-.experiment-three{
+.experiment-three {
   padding: 10px;
   min-height: 700px;
-  background-color:antiquewhite;
+  background-color: antiquewhite;
   text-align: center;
 }
-.experiment-three__title{
-  border-radius:20px;
+.experiment-three__title {
+  border-radius: 20px;
   margin-bottom: 10px;
   padding: 30px 0;
-  background-color:rgb(144, 127, 106);
+  background-color: rgb(144, 127, 106);
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
-
 }
-.experiment-three__text{
+.experiment-three__text {
   padding: 20px 0;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   border-bottom: 1px solid #000;
-
 }
-.experiment-three__btn{
+.experiment-three__btn {
   display: inline-block;
   padding: 20px 35px;
-  border-radius:20px;
-  background-color:#dfb2b2;
+  border-radius: 20px;
+  background-color: #dfb2b2;
   cursor: pointer;
   margin-bottom: 20px;
 }
-
 
 .title-section {
 }
@@ -291,7 +296,7 @@
   position: relative;
   padding-top: 30px;
 }
-.experiment-three__rocket > div{
+.experiment-three__rocket > div {
   display: inline-block;
   vertical-align: middle;
   margin-right: 20px;
@@ -301,93 +306,81 @@
 .rocket__block--nose {
   width: 100px;
   height: 130px;
-  background-color:red;
-  border-radius:51% 49% 50% 50% / 100% 100% 0% 0%;
+  background-color: red;
+  border-radius: 51% 49% 50% 50% / 100% 100% 0% 0%;
   z-index: 3;
-
 }
 .rocket__block--body {
   width: 100px;
   height: 300px;
-  background-color:rgb(126, 117, 117);
+  background-color: rgb(126, 117, 117);
   z-index: 1;
 }
-.rocket__block--portholes{
+.rocket__block--portholes {
   z-index: 4;
 }
-.rocket__block--portholes div:not(:last-child){
+.rocket__block--portholes div:not(:last-child) {
   margin-bottom: 10px;
 }
-.rocket__porthole{
+.rocket__porthole {
   width: 50px;
   height: 50px;
-  background:#fff;
-  border:3px solid #000;
-  border-radius:50%;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
 }
 .rocket__block--right-engine {
   width: 60px;
   height: 150px;
-  border-radius:0% 100% 42% 58% / 100% 100% 0% 0% ;
-  background:#000;
+  border-radius: 0% 100% 42% 58% / 100% 100% 0% 0%;
+  background: #000;
   z-index: 4;
 }
 .rocket__block--left-engine {
   width: 60px;
   height: 150px;
-  border-radius:100% 0% 42% 58% / 100% 100% 0% 0% ;
-  background:#000;
+  border-radius: 100% 0% 42% 58% / 100% 100% 0% 0%;
+  background: #000;
   z-index: 4;
 }
 .rocket__block--flame {
   width: 100px;
   height: 100px;
-  border-radius:23% 77% 46% 54% / 0% 0% 100% 100% ;
-  background:rgb(224, 104, 60);
+  border-radius: 23% 77% 46% 54% / 0% 0% 100% 100%;
+  background: rgb(224, 104, 60);
   z-index: 0;
 }
-.rocket:hover .rocket__block--nose{
+.rocket:hover .rocket__block--nose {
   position: absolute;
   top: 0;
   left: 45%;
 }
-.rocket:hover .rocket__block--body{
+.rocket:hover .rocket__block--body {
   position: absolute;
   top: 130px;
   left: 45%;
 }
-.rocket:hover .rocket__block--right-engine{
+.rocket:hover .rocket__block--right-engine {
   position: absolute;
   top: 380px;
   left: 53%;
 }
-.rocket:hover .rocket__block--left-engine{
+.rocket:hover .rocket__block--left-engine {
   position: absolute;
   top: 380px;
   left: 40.3%;
 }
-.rocket:hover .rocket__block--flame{
+.rocket:hover .rocket__block--flame {
   position: absolute;
   top: 430px;
   left: 45%;
   box-shadow: 0 20px 20px 15px rgb(239, 128, 69);
 }
-.rocket:hover .rocket__block--portholes{
+.rocket:hover .rocket__block--portholes {
   position: absolute;
   top: 140px;
   left: 47%;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .customer-assistance {
   max-width: 150px;
@@ -400,23 +393,23 @@
   max-width: 150px;
   max-height: 150px;
 }
-.customer-assistance__img img{
+.customer-assistance__img img {
   width: 100%;
 }
 
 .customer-assistance__btn {
-  display:block;
+  display: block;
   padding: 15px 20px;
-  background:rgb(76, 76, 197);
-  border-radius:15px;
+  background: rgb(76, 76, 197);
+  border-radius: 15px;
   cursor: pointer;
   text-align: center;
-  color:#fff;
+  color: #fff;
   font-weight: 600;
 }
-.customer-assistance__btn:hover{
-  background:rgba(76, 76, 197, 0.595);
-  color:#000;
+.customer-assistance__btn:hover {
+  background: rgba(76, 76, 197, 0.595);
+  color: #000;
 }
 .footer {
 }
