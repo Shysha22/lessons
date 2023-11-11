@@ -1,0 +1,663 @@
+@import url("reset.css");
+
+
+body{
+  background:#cfb9b9;
+}
+
+.wrapper{
+  min-width: 1200px;
+  position: relative;
+}
+
+[class*="__container"]{
+  max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
+}
+/* header---------------------------------- */
+.header__container{
+  min-height: 100px;
+  background:rgba(52, 48, 48,0.7);
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.header__title{
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #f5d2d2;
+  border-bottom: 1px solid #f5d2d2;
+}
+/* footer------------------------------------ */
+.footer__container {
+  background:#000;
+  min-height: 100px;
+  position: relative;
+}
+.footer__title {
+  color:#fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+/* main------------------------------------ */
+.main{
+  padding-top: 100px;
+}
+
+/* .section-2d------------------ */
+.section-2d-animation {
+  padding: 20px 10px;
+  border-bottom:1px solid #000;
+}
+.section-2d-animation > div{
+  display: inline-block;
+}
+.section-2d-animation > div:hover{
+  cursor: pointer;
+}
+.experiment__block {
+  width: 120px;
+  height: 150px;
+  background-color:rgb(103, 105, 105);
+  margin: 10px;
+  border:2px solid #000;
+  position: relative;
+}
+.experiment__transform{
+  width: 100%;
+  height: 100%;
+  background:rgb(100, 100, 217);
+  transition: all 0.5s;
+
+}
+.experiment__transform p{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.experiment__transform--translate:hover{
+  transform: translate(20%,20%);
+  transition: all 0.3s;
+}
+.experiment__transform--translateX:hover{
+  transform: translateX(10%);
+  transition: all 0.3s;
+}
+.experiment__transform--translateY:hover{
+  transform: translateY(10%);
+  transition: all 0.3s;
+}
+.experiment__transform--scale:hover{
+  transform: scale(0.8,0.8);
+  transition: all 0.3s;
+}
+.experiment__transform--scaleX:hover{
+  transform: scaleX(1.2);
+  transition: all 0.3s;
+}
+.experiment__transform--scaleY:hover{
+  transform: scaleY(1.2);
+  transition: all 0.3s;
+}
+.experiment__transform--rotate:hover{
+  transform: rotate(-15deg);
+  transition: all 0.3s;
+}
+.experiment__transform--rotateX:hover{
+  transform: rotateX(50deg);
+  transition: all 0.3s;
+}
+.experiment__transform--rotateY:hover{
+  transform: rotateY(50deg);
+  transition: all 0.3s;
+}
+
+.experiment__transform--skew:hover{
+  transform: skew(10deg,10deg);
+  transition: all 0.3s;
+}
+.experiment__transform--skewX:hover{
+  transform: skewX(20deg);
+  transition: all 0.3s;
+}
+.experiment__transform--skewY:hover{
+  transform: skewY(30deg);
+  transition: all 0.3s;
+}
+
+.experiment__transform--matrix1:hover{
+  transform: scale(0.8) rotate(-360deg);
+  transition: all 0.7s;
+}
+.experiment__transform--matrix2:hover{
+  transform: translate(250%) scale(1.1) rotate(360deg);
+  transition: all 0.7s;
+}
+
+.experiment__transform--origin:hover{
+  transform-origin: 0 100%;
+  transform: rotate(180deg);
+  transition: all 1s;
+}
+
+/* -----------------------------------3d-------------------------------- */
+.section-3d-animation {
+  padding: 20px 10px;
+  border-bottom: 1px solid #000000;
+}
+.section-3d-animation > div{
+  display: inline-block;
+}
+.section-3d-animation > div:hover{
+  cursor: pointer;
+}
+.experiment__block3d{
+  width: 120px;
+  height: 150px;
+  background-color:rgb(103, 105, 105);
+  margin: 10px;
+  border:2px solid #000;
+  position: relative;
+}
+.experiment__block3d{
+  perspective: 300px;
+	transform-style: flat;
+}
+.experiment__transform--translate3d:hover{
+  transform: translate3d(-20px,20px,20px);
+}
+.experiment__transform--scale3d:hover{
+  transform: scale3d(1.2,1.2,1);
+}
+.experiment__transform--rotate3d:hover{
+    transform: rotate3d(2, 2, 10, 180deg);
+}
+.experiment__transform--rotate3dX:hover{
+  transform: rotateX(180deg);
+}
+.experiment__transform--rotate3dY:hover{
+  transform: rotateY(180deg);
+}
+
+
+/* ------------------------секція машини--------------------- */
+.section-car{
+  height: 1000px;
+  background-color:rgb(109, 109, 117);
+   position: relative;
+  perspective: 300px; 
+	 transform-style: flat; 
+  overflow: hidden;
+
+}
+
+
+
+/* автомобіль--------------- */
+.car__body{
+  height: 200px ;
+  width: 750px;
+  position: relative;
+  top: 70%;
+  z-index: 12;
+}
+
+.car__elments-body{
+  font-size: 0;
+  height: 200px ;
+  width: 750px;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+.car__elments-body div{
+  display: inline-block;
+  background:  rgb(66, 7, 7);
+
+}
+.body-element__block0{
+  width: 50px;
+  height: 45%;
+  position: absolute;
+  top: 57%;
+  left: 8%;
+  transform: translate(-50%);
+  transform: rotate(-5deg);
+  border-radius:100% 0% 58% 42% / 20% 100% 0% 80% ;
+
+}
+.body-element__block1{
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  top: 39%;
+  left: 14%;
+  transform: translate(-50%);
+  transform: rotate(-16deg);
+  border-radius:100% 0% 100% 0% / 14% 100% 0% 83% ;
+
+}
+.body-element__block2{
+  width: 230px;
+  height: 100%;
+  position: absolute;
+  top:15.7%;
+  left: 26%;
+  transform: translate(-50%);
+  transform: rotate(-7deg);
+  border-radius:100% 13% 100% 0% / 24% 90% 0% 76% ;
+
+
+}
+.body-element__block3{
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  position: absolute;
+  left: 41%;
+  top: 28%;
+  transform: rotate(35deg);
+  border-radius: 30px 0px 0 0;
+}
+.body-element__block4 {
+  position: absolute;
+  width: 193px;
+  height: 60%;
+  position: absolute;
+  transform: rotate(1deg);
+  left: 66%;
+  top: 50%;
+  border-radius:0% 100% 21% 79% / 100% 54% 46% 0%   ;
+}
+
+/* деталі колес-------- */
+.detail__rear-wheel,.detail__front-wheel {
+  position: absolute;
+  bottom: -1%;
+  left: 17%;
+  width: 120px;
+  height: 60px;
+  font-size: 0;
+  z-index: 11;
+}
+ .detail__front-wheel{
+  left: 68%;
+ }
+.detail__box-for-wheel div {
+  display: inline-block;
+}
+.box-wheel__item1,.box-wheel__item2{
+  width: 60px;
+  height: 60px;
+  border-radius: 0% 100% 0% 100% / 100% 100% 0% 0% ;
+  background-color: #000;
+
+}
+.box-wheel__item1 {
+  border-radius: 100% 0% 38% 62% / 100% 100% 0% 0%  ;
+}
+.detail__disc-wheel{
+  width: 90px;
+  height: 90px;
+  border-radius:50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 9px;
+  border: 13px solid rgb(32, 31, 31);
+  background: #aaa9a9;
+}
+.disc-wheel__center-block{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background:#445;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  z-index: 10;
+}
+[class*="disc-wheel__item-"]{
+  width: 100%;
+  height: 5px;
+  background-color:rgb(105, 99, 99);
+  border-radius:40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.disc-wheel__item-1{
+  transform:translate(-50%,-50%);
+}
+.disc-wheel__item-2{
+  transform:translate(-50%,-50%) rotate(20deg);;
+}
+.disc-wheel__item-3{
+  transform:translate(-50%,-50%) rotate(40deg);;
+}
+.disc-wheel__item-4{
+  transform:translate(-50%,-50%) rotate(60deg);;
+}
+.disc-wheel__item-5{
+  transform:translate(-50%,-50%) rotate(80deg);;
+}
+.disc-wheel__item-6{
+  transform:translate(-50%,-50%) rotate(100deg);;
+}
+.disc-wheel__item-7{
+  transform:translate(-50%,-50%) rotate(120deg);
+}
+.disc-wheel__item-8{
+  transform:translate(-50%,-50%) rotate(140deg);;
+}
+.disc-wheel__item-9{
+  transform:translate(-50%,-50%) rotate(160deg);;
+}
+/* спойлер--------------------- */
+.detail__spoiler {
+  position: absolute;
+  top: 51%;
+  left: 9%;
+  height: 20px;
+  width: 52px;
+  background: rgb(66, 7, 7);
+  border-radius:3px 10px 0 30px;
+  transform: rotate(5deg);
+}
+/* фара----------------- */
+.detail__front-light {
+  position: absolute;
+  top: 50%;
+  right: 11%;
+  
+}
+.light__item{
+  width: 145px;
+  height: 45px;
+  background:  rgb(66, 7, 7);
+  border-radius:0% 100% 0% 100% / 100% 100% 0% 0%  ;
+  position: relative;
+}
+.light__item::after{
+  content:"";
+  position: absolute;
+  width: 42px;
+  height: 30px;
+  background-color:grey;
+  top:24%;
+  right: 6%;
+  transform: skew(55deg, 5deg);
+  border-radius:50%;
+  box-shadow: -1px -1px 2px 2px #000;
+
+}
+
+.detail__rear-light{
+  position: absolute;
+  top: 65%;
+  left: 7.9%;
+  background:rgb(162, 5, 5);
+  width: 25px;
+  height: 20px;
+  transform: rotate(-5deg);
+  border-radius:10px 2px 20px 10px;
+  border:3px solid rgb(130, 0, 0)
+}
+/* вікна------------------ */
+.detail__windows{
+  position: absolute;
+  width: 320px;
+  height: 70px;
+  top: 16%;
+  left: 25%;
+  font-size: 0;
+  overflow: hidden;
+  z-index: 9;
+}
+.detail__windows::after{
+  content:"23";
+  position: absolute;
+  bottom: 0;
+  left: 4%;
+  width: 80%;
+  height: 4px;
+  background-color:#000
+}
+.detail__windows div{
+  display: inline-block;
+}
+.window__item1 {
+  position: relative;
+  top:12px;
+  left: 9px;
+  width: 21%;
+  height: 55.4%;
+  background:grey;
+  border-radius:100% 0% 45% 55% / 47% 100% 0% 53% ;
+  border:5px solid #000;
+  transform: rotate(-19deg);
+}
+.window__item2 {
+  position: relative;
+  top:11px;
+  left: -3px;
+  transform: rotate(-13deg);
+  width: 48%;
+  height: 91%;
+  background:grey;
+  border-top:5px solid #000;
+  border-left:2px solid #000;
+  border-radius:14px 12px 0 0;
+}
+.window__item3 {
+  width: 30%;
+  height: 100%;
+  background:grey;
+  position: relative;
+  top:31%;
+  left: -15%;
+  transform: rotate(35deg);
+  border-radius: 11px 10px 0 0;
+  border-top:5px solid #000;
+  border-right:5px solid #000;
+
+
+}
+/* двері-------------------- */
+.detail__door{
+  position: absolute;
+  width: 28%;
+  height: 50%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  bottom:0;
+  left: 49.4%;
+  transform:translateX(-50%) skew(14deg,0deg);
+  z-index: 8;
+  border-radius: 0 20px 40px 5px
+}
+.detail__door::after{
+  content:"";
+  position: absolute;
+  top:30px;
+  left: 25px;
+  width: 30px;
+  height: 7px;
+  transform: skew(10deg);
+  border:1px solid #000;
+}
+
+/* задня тінь--------------- */
+.detail__back-shadow{
+  position: absolute;
+  width: 16%;
+  height: 2px;
+  top:65%;
+  box-shadow:10px -5px 4px 2px #000;
+  left: 13%;
+  border-radius: 70%;
+  transform: rotate(2deg);
+  z-index: 5;
+}
+/* дорога----------------- */
+.road{
+  width: 117%;
+  height: 15%;
+  background-color:#445;
+  position:absolute;
+  top:81%;
+  left: -9%;
+  transform: rotateX(40deg);
+  z-index: 9;
+}
+.road::before{
+  content:"2";
+  position: relative;
+  width: 100%;
+  height: 4%;
+  background:#fff;
+  top:50%;
+  transform:translateY(-50%)
+}
+
+/* море--------------- */
+.sea{
+  width: 135%;
+  height: 40%;
+  background: linear-gradient(rgb(43, 43, 128), rgb(23, 94, 209));;
+  position: relative;
+  top:15%;
+  left: -17%;
+  transform:rotateX(30deg);
+  z-index:4
+}
+.sea__waves{
+  width: 30px;
+  height: 30px;
+}
+[class*="sea__waves--"]{
+  position: absolute;
+}
+.sea__waves--1{
+  top: 30%;
+  left: 40%;
+}
+.sea__waves--2{
+  top: 20%;
+  left: 47%;
+}
+.sea__waves--3{
+  top: 60%;
+  left: 70%;
+}
+.sea__waves--4{
+  top: 20%;
+  left: 10%;
+}
+.sea__waves--5{
+  top: 10%;
+  left: 80%;
+}
+.sea__waves--6{
+  top: 30%;
+  left: 75%;
+}
+.sea__waves--7{
+  top: 60%;
+  left: 20%;
+}
+.sea__waves--8{
+  top: 70%;
+  left: 40%;
+}
+
+/* небо-------------- */
+.sky {
+  background:linear-gradient(rgb(0, 81, 255),rgb(255, 51, 0));
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+}
+.sky::after{
+  content:"";
+  width: 200px;
+  height: 200px;
+  border-radius:50%;
+  background:radial-gradient(rgb(168, 168, 29),rgb(255, 30, 0));
+  box-shadow: 0 0 30px 10px rgb(255, 30, 0);
+  position: relative;
+  top: 40%;
+  left: 79%;
+}
+
+/* дорожнє огородження----------- */
+.road-fence{
+  width: 100%;
+  height: 40px;
+  background:grey;
+  position: relative;
+  top:12%;
+  z-index: 9;
+  border:1px solid rgb(123, 110, 110);
+}
+.road-fence::before{
+  content:"";
+  width: 100%;
+  height: 20px;
+  position: relative;
+  top: 50%;
+  background:rgb(102, 101, 101);
+  z-index: 9;
+}
+.road-fence__item {
+  width: 25px;
+  height: 30px;
+  background:rgb(73, 71, 71);
+  position: absolute;
+  z-index: 3;
+
+}
+.road-fence__item--1{
+  left:60%;
+  bottom:-60%;
+  z-index: 3;
+
+}
+.road-fence__item--1 {
+  left:10%;
+  bottom:-60%;
+  z-index: 3;
+}
+.road-fence__item--2 {
+  left:40%;
+  bottom:-60%;
+  z-index: 3;
+}
+
+.road-fence__item--3 {
+  left:60%;
+  bottom:-60%;
+  z-index: 3;
+}
+.road-fence__item--4 {
+  left:80%;
+  bottom:-60%;
+  z-index: 3;
+}
