@@ -107,16 +107,16 @@
   transition: all 0.1s;
   box-shadow: 0 0 4px 1px #000;
 }
-a
 
 /* -----------------------main------------------ */
 
 /* --------------------categories------------- */
 .categories {
-  padding-top: 50px;
+  font-family: "Causten", sans-serif;
+  border-bottom: 1px solid #000;
+  padding: 50px 0;
   max-width: 1240px;
   margin: 0 auto;
-  font-family: "Causten", sans-serif;
   border-bottom: 1px solid #000;
 }
 .categories__title {
@@ -142,7 +142,6 @@ a
   display: flex;
   flex-wrap: wrap;
   gap: 51px;
-  margin-bottom: 100px;
 }
 .product__item {
   max-width: 270px;
