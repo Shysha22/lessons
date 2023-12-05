@@ -1,0 +1,490 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body {
+  font-family: "Causten", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 870px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  border-bottom: 1px solid #edeef2;
+}
+.info-user__container {
+  max-width: 925px;
+}
+.check-out__container {
+  max-width: 830px;
+}
+.call-back__container {
+  max-width: 1250px;
+}
+
+/* ---------------------header------------------- */
+.header__container {
+  max-width: 1270px;
+  display: flex;
+  align-items: center;
+  column-gap: 7%;
+}
+.header__info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  flex: 0 0 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #807d7e;
+  font-size: 22px;
+  font-weight: 500;
+}
+.menu__item {
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu__item::before {
+  content: "";
+  height: 2px;
+  width: 80%;
+  left: -100%;
+  background: #807d7e;
+  position: absolute;
+  bottom: 0;
+  transition: 0.2s all;
+}
+.menu__item:hover.menu__item::before {
+  left: 0;
+  transition: 0.2s all;
+}
+.search__form {
+  background: #f6f6f6;
+  display: flex;
+}
+
+/* подумати над інпутом */
+.search__input {
+  color: #807d7e;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 20px;
+  background: #f6f6f6;
+}
+.search__btn {
+  background: #f6f6f6;
+  margin-right: 12px;
+  padding-left: 5px;
+}
+.nav-bar {
+  flex: 0 0 160px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar__item {
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.nav-bar__item:hover {
+  transition: all 0.2s;
+  background: #8a33fd;
+}
+
+/* ---------------------main------------------- */
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.info-section--gap {
+  row-gap: 20px;
+}
+.title-section,
+.subtitle-section {
+  font-family: "Core Sans C", sans-serif;
+  color: #3c4242;
+}
+.title-section {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.56px;
+  display: flex;
+  align-items: center;
+}
+.text-section {
+  color: #3c4242;
+  font-size: 16px;
+}
+.title-section--before::before {
+  content: "";
+  width: 6px;
+  height: 28px;
+  border-radius: 10px;
+  background: #8a33fd;
+  margin-right: 15px;
+}
+.subtitle-section {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.44px;
+}
+/* --------------info-user----------------------- */
+.info-user__info {
+  margin-bottom: 50px;
+}
+.form__body {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.form__body--margin {
+  margin: 0 -20px 30px;
+}
+.form__item {
+  flex: 0 0 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 10px;
+}
+.form__item input {
+  width: 100%;
+  padding: 18px 22px;
+  background: #f6f6f6;
+  color: #807d7e;
+  font-size: 16px;
+}
+.textarea {
+  min-width: 100%;
+}
+.textarea__input {
+  padding: 18px 22px;
+  min-height: 150px;
+  resize: vertical;
+  background: #f6f6f6;
+}
+.form__item label {
+  color: #3c4242;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.36px;
+}
+
+.form__set-address {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-bottom: 60px;
+}
+.form__item-checkbox {
+  color: #3c4242;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: relative;
+}
+
+.checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__label {
+  display: inline-flex;
+  column-gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox__input:focus-visible + .checkbox__label {
+  outline: 1px solid #3c4242;
+}
+/* розумію що тут потрібен svg але знайшов тіки png */
+.checkbox__input:checked + .checkbox__label::before {
+  background: url("../img/forbidden-mark.png") center / 17px no-repeat;
+}
+.checkbox__label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+.form__action {
+  max-width: 295px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 12px 40px;
+  color: #807d7e;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.2s;
+  background: #f6f6f6;
+}
+.btn:hover {
+  transition: all 0.2s;
+  background: #8a33fd;
+  color: #fff;
+}
+/* ---------------------check-out-------------------------- */
+.input-select {
+  width: 100%;
+  padding: 18px 20px;
+  background: #f6f6f6;
+  color: #807d7e;
+  font-size: 16px;
+}
+.input-select option {
+  color: #fff;
+  background-color: #9b9b9b;
+  cursor: pointer;
+}
+
+.check-out__info {
+  margin-bottom: 50px;
+}
+.form__item--location {
+  flex: 0 0 33.333%;
+}
+.form__action-detail {
+  color: #3c4242;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 20px;
+}
+.form__item-checkbox--detail input {
+  width: 18px;
+  height: 18px;
+}
+/* ----------------shipping-addres---------------- */
+.shipping-address__info {
+  margin-bottom: 30px;
+}
+.form--padding-shipping {
+  padding: 28px 48px 28px 28px;
+  border-radius: 12px;
+  background: #f6f6f6;
+}
+.form__body--shipping-addres {
+  color: #3c4242;
+  font-size: 20px;
+  font-weight: 700;
+  row-gap: 25px;
+}
+
+.form__body--shipping-addres .form__item-radio:not(:last-child) {
+  padding: 0 0 25px 0;
+  border-bottom: 1px solid #bebcbd;
+}
+.form__item-radio {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1 1 100%;
+  position: relative;
+}
+.radio__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.radio__label {
+  display: inline-flex;
+  column-gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 38px;
+}
+.radio__input:focus-visible + .radio__label {
+  outline: 1px solid #3c4242;
+}
+.radio__input:checked + .radio__label::after {
+  transition: all 0.2s;
+  opacity: 1;
+}
+.radio__label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  flex: 0 0 18px;
+  left: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #000;
+}
+.radio__label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  opacity: 0;
+  flex: 0 0 15px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: #756f6f;
+}
+
+/* ---------------shipping-method------------------ */
+.shipping-method__info {
+  margin-bottom: 50px;
+}
+.shipping-method__content {
+  padding: 32px 48px 32px 26px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.shipping-method__content > div:not(:last-child) {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #bebcbd;
+}
+.content-shipping__title,
+.content-shipping__price {
+  color: #3c4242;
+  font-size: 20px;
+  font-weight: 700;
+}
+.content-shipping__delivery {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.content-shipping__charges-delivery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-shipping__text {
+  color: #807d7e;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ----------------------payment-------------------- */
+
+.payment__info {
+  margin-bottom: 30px;
+}
+.form--padding-payment {
+  padding: 45px 48px 45px 28px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  margin-bottom: 50px;
+}
+
+.payment-method .payment-method__item:not(:last-child) {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #bebcbd;
+}
+.payment-method__item {
+  min-width: 100%;
+}
+.payment-method__checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.checkbox__text label {
+  color: #3c4242;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.checkbox__descrpt {
+  color: #3c4242;
+  font-size: 16px;
+}
+.payment-method__info {
+  padding: 30px 23px 0px 37px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.payment-method__list-img {
+  display: inline-flex;
+  flex: 0 1 60%;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+}
+.payment-method__user-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 30px;
+}
+.form__item--border {
+  padding: 0 15px;
+}
+.form__item--border input {
+  border-radius: 8px;
+  border: 1px solid #3c4242;
+}
+/* -----------------------call-back---------------- */
+
+.call-back__info {
+  margin-bottom: 30px;
+}
+.textarea__input--height {
+  min-height: 222px;
+}
+.call-back__container {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #37393f;
+}
+.call-back__subtitle {
+  font-weight: 500;
+}
+.call-back__subtitle::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #40ddb6;
+  margin-right: 5px;
+}
+.call-back__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}

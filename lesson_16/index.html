@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="img/logo.svg" alt="Логотип">
+        </div>
+        <div class="header__info">
+          <div class="menu">
+            <div class="menu__item">Shop</div>
+            <div class="menu__item">Men</div>
+            <div class="menu__item">Women</div>
+            <div class="menu__item">Combos</div>
+            <div class="menu__item">Joggers</div>
+          </div>
+          <div class="search">
+            <form action="#" method="POST" class="search__form">
+              <button class="search__btn" type="submit"><img src="img/search.svg" alt=""></button>
+              <input class="search__input" type="search" placeholder="Search">
+            </form>
+          </div>
+          <div class="nav-bar">
+            <div class="nav-bar__item"><img src="img/heart.svg" alt="улюблені товари"></div>
+            <div class="nav-bar__item"><img src="img/user.svg" alt="кабінет"></div>
+            <div class="nav-bar__item"><img src="img/shopping-cart.svg" alt="кошик"></div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <main class="main">
+
+      <div class="info-user">
+        <div class="info-user__container info-user__container">
+
+          <div class="info-user__info info-section info-section--gap">
+            <h2 class="title-section">My Info</h2>
+            <h4 class="subtitle-section">Add Address</h4>
+          </div>
+          <form action="#" method="POST" enctype="multipart/form-data" class="form">
+            <div class="form__body form__body--margin">
+              <div class="form__item">
+                <label for="first-name">First Name*</label>
+                <input required id="first-name" type="text" name="first-name-user" placeholder="First Name">
+              </div>
+              <div class="form__item">
+                <label for="last-name">Last Name*</label>
+                <input required id="last-name" type="text" name="last-name-user" placeholder="Last Name">
+              </div>
+              <div class="form__item">
+                <label for="country-region">Country / Region*</label>
+                <input required id="country-region" type="text" name="user-country" placeholder="Country / Region">
+              </div>
+              <div class="form__item">
+                <label for="company-name">Company Name*</label>
+                <input required id="company-name" type="text" name="company-name" placeholder="Company Name">
+              </div>
+              <div class="form__item">
+                <label for="street-address">Street Address*</label>
+                <input required id="street-address" type="text" name="address" placeholder="Street Address">
+              </div>
+              <div class="form__item">
+                <label for="apt-suite-unit">Apt, suite, unit</label>
+                <input required id="apt-suite-unit" type="text" name="apt-suite-unit" placeholder="Apt, suite, unit">
+              </div>
+              <div class="form__item">
+                <label for="city">City*</label>
+                <input required id="city" type="text" name="city" placeholder="City*">
+              </div>
+              <div class="form__item">
+                <label for="state">State*</label>
+                <select name="state" id="state" class="input-select" required>
+                  <option value disabled selected hidden>State</option>
+                  <option value="ukr">Україна</option>
+                  <option value="usa">США</option>
+                  <option value="eng">Англія</option>
+                  <option value="fran">Франція</option>
+                </select>
+              </div>
+              <div class="form__item">
+                <label for="phone">Phone*</label>
+                <input required id="phone" type="tel" name="phone" placeholder="Phone">
+              </div>
+              <div class="form__item">
+                <label for="postal-code">Postal Code*</label>
+                <input required id="postal-code" type="number" name="postal-cod" placeholder="Postal Code">
+              </div>
+
+              <div class=" form__item textarea">
+                <label for="textarea">Delivery Instruction</label>
+                <textarea class="textarea__input" id="textarea" placeholder="Delivery Instruction"></textarea>
+              </div>
+            </div>
+            <div class="form__set-address">
+              <div class="form__item-checkbox checkbox">
+                <input class="checkbox__input" type="checkbox" name="shipping-address" id="shipping-address" required>
+                <label class="checkbox__label" for="shipping-address">Set as default shipping address</label>
+              </div>
+              <div class="form__item-checkbox checkbox">
+                <input required class="checkbox__input" type="checkbox" name="billing-address" id="billing-address">
+                <label class="checkbox__label" for="billing-address">Set as default billing address</label>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Save</button>
+              <button class="btn" type="reset">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="check-out">
+        <div class="check-out__container check-out__container">
+          <div class="check-out__info info-section info-section--gap">
+            <h2 class="title-section title-section--before">Check Out</h2>
+            <h4 class="subtitle-section">Billing Details</h4>
+          </div>
+          <form action="#" method="POST" enctype="multipart/form-data" class="form">
+            <div class="form__body form__body--margin">
+              <div class="form__item">
+                <label for="first-name-check">First Name*</label>
+                <input required id="first-name-check" type="text" placeholder="First Name" name="first-name">
+              </div>
+              <div class="form__item">
+                <label for="last-name-check">Last Name*</label>
+                <input required id="last-name-check" type="text" placeholder="Last Name" name="last-name">
+              </div>
+              <div class="form__item">
+                <label for="country-region-check">Country / Region*</label>
+                <input required id="country-region-check" type="text" placeholder="Country / Region" name="country">
+              </div>
+              <div class="form__item">
+                <label for="company-check">Company Name*</label>
+                <input required id="company-check" type="text" placeholder="Company Name" name="company">
+              </div>
+              <div class="form__item">
+                <label for="street-check">Street Address*</label>
+                <input required id="street-check" type="text" placeholder="Street Address" name="streets-address">
+              </div>
+              <div class="form__item">
+                <label for="apt-check">Apt, suite, unit</label>
+                <input required id="apt-check" type="text" placeholder="Apt, suite, unit" name="apt-suite-unit">
+              </div>
+              <div class="form__item form__item--location">
+                <label for="city-check">City*</label>
+                <input required id="city-check" type="text" placeholder="City*" name="city">
+              </div>
+              <div class="form__item form__item--location">
+                <label for="state-check">State*</label>
+                <select name="state" id="state-check" class="input-select">
+                  <option value disabled selected hidden>State</option>
+                  <option value="ukr">Україна</option>
+                  <option value="usa">США</option>
+                  <option value="eng">Англія</option>
+                  <option value="fran">Франція</option>
+                </select>
+              </div>
+              <div class="form__item form__item--location">
+                <label for="code-check">Postal Code*</label>
+                <input required id="code-check" type="number" name="postal-code" placeholder="Postal Code">
+              </div>
+              <div class="form__item">
+                <label for="phone-check">Phone*</label>
+                <input required id="phone-check" type="tel" name="phone" placeholder="Phone">
+              </div>
+            </div>
+            <div class="form__action-detail">
+              <button class="btn" type="submit">Continue to delivery</button>
+              <div class="form__item-checkbox checkbox">
+                <input class="checkbox__input" type="checkbox" name="save-info" id="save">
+                <label class="checkbox__label" for="save">Save my information for a faster checkout</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="shipping-address">
+        <div class="shipping-address__container">
+          <div class="shipping-address__info info-section">
+            <h4 class="subtitle-section">Shipping Address</h4>
+            <div class="text-section">
+              <p>Select the address that matches your card or payment method..</p>
+            </div>
+          </div>
+          <form action="#" method="POST" enctype="multipart/form-data" class="form form--padding-shipping">
+            <div class="form__body form__body--shipping-addres">
+              <div class="form__item-radio radio">
+                <input class="radio__input" id="billing" type="radio" name="address" checked>
+                <label class="radio__label" for="billing">Same as Billing address</label>
+              </div>
+              <div class="form__item-radio radio">
+                <input class="radio__input" id="different" type="radio" name="address">
+                <label class="radio__label" for="different">Use a different shipping address</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="shipping-method">
+        <div class="shipping-method__container">
+          <div class="shipping-method__info info-section">
+            <h4 class="subtitle-section">Shipping Method</h4>
+          </div>
+          <div class="shipping-method__content content-shipping">
+            <div class="content-shipping__date">
+              <h5 class="content-shipping__title">Arrives by Monday, June 7</h5>
+            </div>
+            <div class="content-shipping__delivery">
+              <div class="content-shipping__charges-delivery">
+                <h5 class="content-shipping__title">Delivery Charges</h5>
+                <div class="content-shipping__price">$5.00</div>
+              </div>
+              <div class="content-shipping__text">
+                <p>Additional fess may apply</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="payment">
+        <div class="payment__container">
+          <div class="payment__info info-section">
+            <h4 class="subtitle-section">Payment Method</h4>
+            <div class="text-section">
+              <p>All transactions are secure and encrypted.</p>
+            </div>
+          </div>
+
+          <form id="form-payment" action="#" method="POST" enctype="multipart/form-data"
+            class="form form--padding-payment">
+            <div class="form__body payment-method">
+
+              <div class="payment-method__item">
+                <div class="payment-method__checkbox checkbox">
+                  <input class="checkbox__input" id="credit-card" type="radio" name="credit-card">
+                  <div class="checkbox__text">
+                    <label for="credit-card">Credit Card</label>
+                    <div class="checkbox__descrpt">
+                      <p>We accept all major credit cards.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class=" payment-method__info">
+                  <div class="payment-method__list-img">
+                    <a class="payment-method__img" href="#"><img src="img/frame-440.svg" alt="Спосіб оплати"></a>
+                    <a class="payment-method__img" href="#"><img src="img/frame-441.svg" alt="Спосіб оплати"></a>
+                    <a class="payment-method__img" href="#"><img src="img/frame-442.svg" alt="Спосіб оплати"></a>
+                    <a class="payment-method__img" href="#"><img src="img/frame-443.svg" alt="Спосіб оплати"></a>
+                  </div>
+                  <div class="payment-method__user-info">
+                    <div class="form__item form__item--border">
+                      <input id="card-number" type="number" placeholder="Card number">
+                    </div>
+                    <div class="form__item form__item--border">
+                      <input id="name-card" type="text" placeholder="Name of card">
+                    </div>
+                    <div class="form__item form__item--border">
+                      <input id="expiration-date" type="date" placeholder="Expiration date (MM/YY)">
+                    </div>
+                    <div class="form__item form__item--border">
+                      <input id="security-code" type="password" placeholder="Security Code">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-method__item">
+                <div class="payment-method__checkbox checkbox">
+                  <input class="checkbox__input" id="cash" type="radio" name="credit-card">
+                  <div class="checkbox__text">
+                    <label for="cash">Cash on delivery</label>
+                    <div class="checkbox__descrpt">
+                      <p>Pay with cash upon delivery.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-method__item">
+                <div class="payment-method__checkbox checkbox">
+                  <input class="checkbox__input" id="paypal" type="radio" name="credit-card">
+                  <div class="checkbox__text">
+                    <label for="paypal">Paypal</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <button class="btn" form="form-payment" type="submit">Pay Now</button>
+        </div>
+
+      </div>
+
+      <div class="call-back">
+        <div class="call-back__container call-back__container">
+          <div class="call-back__info info-section info-section--gap">
+            <h5 class="call-back__subtitle">Contact Us</h5>
+            <h2 class="call-back__title">Request A Call Back !</h2>
+          </div>
+          <form action="#" method="POST" enctype="multipart/form-data" class="form">
+            <div class="form__body form__body--margin">
+              <div class="form__item">
+                <input id="user-name" type="text" placeholder="Your Name">
+              </div>
+              <div class="form__item">
+                <input id="user-email" type="email" placeholder="Email Address">
+              </div>
+              <div class="form__item">
+                <input id="user-phone" type="number" placeholder="Phone Number">
+              </div>
+              <div class="form__item">
+                <input id="user-subject" type="text" placeholder="Subject">
+              </div>
+              <div class="form__item textarea">
+                <textarea class="textarea__input textarea__input--height" id="textarea-call"
+                  placeholder="Message..."></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container"></div>
+    </footer>
+  </div>
+</body>
+
+</html>
