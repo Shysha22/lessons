@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900");
+
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Text:regular,italic");
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Infant:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic");
+
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Infant:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic");
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic");
+
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten/Causten-Regular.woff2") format(woff2),
+    url("../fonts/Causten/Causten-Regular.woff") format(woff);
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten/Causten-Medium.woff2") format(woff2),
+    url("../fonts/Causten/Causten-Medium.woff") format(woff);
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten/Causten-Semi-Bold.woff2") format(woff2),
+    url("../fonts/Causten/Causten-Semi-Bold.woff") format(woff);
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten/Causten-Semi-Bold.woff2") format(woff2),
+    url("../fonts/Causten/Causten-Semi-Bold.woff") format(woff);
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/Core-sans-c/CoreSansC-65Bold.woff2") format(woff2),
+    url("../fonts/Core-sans-c/CoreSansC-65Bold.woff") format(woff);
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/Core-sans-c/CoreSansC-85Heavy.woff2") format(woff2),
+    url("../fonts/Core-sans-c/CoreSansC-85Heavy.woff") format(woff);
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
