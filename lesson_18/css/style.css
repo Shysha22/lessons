@@ -129,7 +129,7 @@ body {
   column-gap: 20px;
   position: relative;
 }
-.log-in__link {
+.login-link {
   font-size: 20px;
   font-weight: 700;
   padding: 12px 30px;
@@ -142,7 +142,7 @@ body {
 }
 
 @media (any-hover: hover) {
-  .log-in__link:hover {
+  .login-link:hover {
     color: aliceblue;
     transition: all 0.3s;
     background: #1b6377;
