@@ -17,7 +17,7 @@ body {
 }
 
 [class*="__container"] {
-  max-width: 1200px;
+  max-width: 1220px;
   padding: 10px 15px;
   margin: 0 auto;
 }
@@ -28,7 +28,6 @@ body {
   display: flex;
   align-items: center;
   column-gap: 20px;
-  font-family: "Merriweather", sans-serif;
   min-height: 100px;
   justify-content: space-between;
 }
@@ -38,6 +37,8 @@ body {
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
+  font-family: "Merriweather";
+  z-index: 5;
 }
 .menu {
   flex: 0 1 650px;
@@ -48,8 +49,10 @@ body {
   flex-wrap: wrap;
   row-gap: 15px;
   column-gap: 35px;
+  position: relative;
 }
 .menu__link {
+  font-family: "Merriweather";
   font-size: 20px;
   font-weight: 700;
 }
@@ -72,15 +75,27 @@ body {
   height: 8px;
   transition: all 0.3s;
 }
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 5px;
+  transform: translate(0px, 10%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: 10;
+}
 @media (any-hover: hover) {
   .menu__item--parents:hover .menu__link::after {
     transform: rotate(180deg);
     transition: all 0.3s;
   }
   .menu__item--parents:hover .sub-menu {
-    transform: translateY(0);
+    transform: translate(0, 0);
+    opacity: 1;
     visibility: visible;
-    transition: all 0.3s;
     pointer-events: all;
   }
 }
@@ -88,20 +103,11 @@ body {
 .menu__item--parents {
   position: relative;
 }
-.sub-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding-top: 5px;
-  transform: translateY(-15%);
-  visibility: hidden;
-  transition: all 0.2s;
-  pointer-events: none;
-}
+
 .sub-menu__list {
   min-width: 200px;
   border-radius: 10px;
-  background-color: rgba(177, 175, 175, 0.603);
+  background-color: rgb(177, 175, 175);
   padding: 15px;
   transition: all 0.3s;
   cursor: pointer;
@@ -116,15 +122,12 @@ body {
 .sub-menu__list .sub-menu__item:not(:last-child) {
   margin-bottom: 15px;
 }
-.sub-menu__item {
-}
-.sub-menu__link {
-}
 
 .header__action {
   flex-shrink: 0;
   display: flex;
   column-gap: 20px;
+  position: relative;
 }
 .log-in__link {
   font-size: 20px;
@@ -154,11 +157,12 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.425);
+    background-color: rgb(211, 188, 138);
     top: 0;
     left: 0;
     transform: translateY(-100%);
     transition: all 0.3s;
+    z-index: 4;
   }
   .open-menu .menu__body {
     transition: all 0.3s;
@@ -173,9 +177,13 @@ body {
     opacity: 0.5;
   }
   .menu__list {
-    padding-top: 80px;
+    padding: 60px 20px 20px 0;
     flex-direction: column;
-    text-align: center;
+    text-align: right;
+    align-items: end;
+  }
+  .menu__link {
+    padding: 10px 0;
   }
   .menu__item--parents .menu__link {
     display: block;
@@ -184,11 +192,13 @@ body {
     display: none;
   }
   .sub-menu {
+    display: inline-block;
     visibility: visible;
     position: relative;
     transform: translateY(0);
+    opacity: 1;
   }
-  .log-in__link {
+  .login-link {
     padding: 5px 15px;
     font-size: 18px;
   }
@@ -245,17 +255,451 @@ body {
     gap: 5px;
   }
   .header__logo {
-    font-size: 24px;
+    font-size: 20px;
   }
   .actions-header {
     gap: 10px;
   }
   .log-in__link {
-    font-size: 16x;
+    font-size: 14px;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 2px 5px;
     border-radius: 3px;
     background: #0e333d;
     transition: all 0.3s;
+  }
+}
+
+/* ------------------hero-1---------------------- */
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 5px;
+  row-gap: 30px;
+}
+.hero__about {
+  flex: 0 1 48.4%;
+}
+.hero__info {
+  margin-bottom: 48px;
+}
+.hero__info > * {
+  margin-bottom: 10px;
+}
+.hero__title {
+  color: #0e333d;
+  font-family: "DM Serif Text", sans-serif;
+  font-size: 78px;
+  line-height: 1.3;
+  margin-bottom: 32px;
+}
+.hero__text {
+  color: #727272;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hero__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.hero__action {
+  display: flex;
+  max-width: 430px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.hero__btn {
+  flex: 0 1 50%;
+  color: #0e333d;
+  font-family: "DM Serif Text", sans-serif;
+  font-size: 28px;
+  text-decoration: underline;
+  padding: 10px 40px;
+  transition: all 0.3s;
+  background: none;
+}
+.hero__btn--action {
+  color: #fff;
+  border-radius: 5px;
+  background: #0e333d;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+@media (any-hover: hover) {
+  .hero__btn:hover {
+    box-shadow: 0 0 5px 2px #000;
+  }
+}
+.hero__gallery {
+  flex-basis: 43.4%;
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hero__img {
+  aspect-ratio: 245 / 467;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__link-img1 {
+  margin-bottom: -70px;
+}
+.hero__link-img2 {
+  margin-top: -70px;
+}
+@media (max-width: 1100px) {
+  .hero__title {
+    font-size: 58px;
+  }
+}
+@media (max-width: 990.98px) {
+  .hero__container {
+    flex-direction: column;
+  }
+  .hero__about {
+    text-align: center;
+  }
+  .hero__title {
+    margin-bottom: 20px;
+  }
+  .hero__info {
+    margin-bottom: 25px;
+  }
+  .hero__action {
+    margin: 0 auto;
+  }
+  .hero__btn {
+    padding: 5px 20px;
+  }
+  .hero__gallery {
+    padding: 30px 0;
+  }
+  .hero__link-img1 {
+    margin-bottom: -30px;
+  }
+  .hero__link-img2 {
+    margin-top: -30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__gallery {
+    flex: 0 1 100%;
+  }
+  .hero__title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  .hero__text {
+    font-size: 18px;
+  }
+  .hero__info {
+    margin-bottom: 15px;
+  }
+  .hero__action {
+    max-width: 320px;
+  }
+  .hero__action {
+    margin: 0 auto;
+  }
+  .hero__btn {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+  .hero__gallery {
+    padding: 30px 0;
+  }
+}
+@media (max-width: 560px) {
+  .hero__gallery {
+    flex-direction: column;
+  }
+  .hero__gallery > a {
+    margin: 0;
+  }
+  .hero__gallery {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  .hero__text {
+    font-size: 16px;
+  }
+  .hero__info {
+    margin-bottom: 10px;
+  }
+  .hero__action {
+    max-width: 250px;
+  }
+}
+.footer__container {
+  background: #000000;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-page {
+  color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 24px;
+  background-color: grey;
+  border: 1px solid #575656;
+  box-shadow: 0 4px 0 1px grey;
+  transition: all 0.3s;
+}
+
+@media (any-hover: hover) {
+  .link-page:hover {
+    transition: all 0.3s;
+    transform: translateY(4px);
+    box-shadow: 0 0 0 0 grey;
+    border: 1px solid #575656;
+    color: red;
+  }
+}
+
+/* ------------------------------------------page2------------------------- */
+
+.page {
+  position: relative;
+}
+.action-header__item {
+  flex: 0 0 32px;
+  position: relative;
+}
+.action-header__item span {
+  position: absolute;
+  background-color: #ff3333;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 9px;
+  text-align: center;
+  line-height: 12px;
+}
+.actions-header__icon {
+  max-width: 100%;
+  transition: all 0.3s;
+}
+@media (any-hover: hover) {
+  .actions-header__icon:hover {
+    transition: all 0.3s;
+    transform: scale(1.2);
+  }
+}
+
+/* --------------.jewellery------------------- */
+
+.jewellery {
+  z-index: 10;
+  background: #502203;
+  color: #fff;
+  font-family: "Cormorant Infant", sans-serif;
+  padding: 100px 0px 55px 0px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.jewellery__container {
+  display: flex;
+  flex: 1 1 auto;
+}
+.jewellery__info {
+}
+.jewellery__info > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.jewellery__title {
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.btn-jewellery {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  padding: 15px 25px;
+  transition: all 0.3s;
+}
+.btn-jewellery::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: all 0.3s;
+}
+
+.page__img {
+  position: absolute;
+}
+.page__img--left-top {
+  top: -10%;
+  left: 0;
+}
+.page__img--left-bottom {
+  bottom: 5px;
+  left: 40px;
+  border-radius: 195px 195px 0px 0px;
+  border: 1px solid #fff;
+}
+.page__img--left-bottom img {
+  border-radius: 196px 196px 0px 0px;
+  transform: translate(5px, 6px);
+  aspect-ratio: 240/215;
+  width: 100%;
+  object-fit: cover;
+}
+.page__img--right-top {
+  top: 175px;
+  right: 0;
+  z-index: 2;
+}
+.page__img--right-bottom {
+  bottom: 55px;
+  right: 0;
+  z-index: 5;
+  border-radius: 215px;
+  border: 1px solid #fff;
+  padding: 17px 12px;
+  transform: translateX(40%);
+}
+.page__img--right-bottom img {
+  border-radius: 195px;
+  aspect-ratio: 237/337;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (any-hover: hover) {
+  .btn-jewellery:hover::before {
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  .btn-jewellery:hover {
+    color: grey;
+    transition: all 0.3s;
+  }
+}
+.jewellery__info > *:last-child {
+  margin-bottom: 0;
+}
+.jewellery__img {
+  flex-basis: 36.75%;
+  flex-shrink: 0;
+  border-radius: 215px;
+  border: 1px solid #fff;
+  padding: 28px 20px;
+}
+.jewellery__img img {
+  width: 100%;
+  border-radius: 195px;
+}
+
+.content-jewellery {
+  display: flex;
+  flex-direction: column;
+
+  align-items: stretch;
+  row-gap: 20px;
+  justify-content: space-between;
+}
+.content-jewellery__text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  /* flex-grow: 1; */
+}
+.content-jewellery__item {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 10px;
+}
+.content-jewellery__item::before {
+  content: "";
+  width: 1px;
+  height: 79%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0px, -50%);
+}
+.footer--background {
+  background: #000;
+}
+
+@media (min-width: 992px) {
+  .jewellery__info {
+    flex-basis: 31.625%;
+    flex-shrink: 0;
+    padding: 57px 30px 0 0;
+  }
+  .jewellery__content {
+    flex-basis: 31.625%;
+    padding: 75px 0 0 30px;
+    flex-shrink: 0;
+  }
+  .content-jewellery__item {
+    align-self: flex-end;
+    margin: auto 0;
+  }
+}
+@media (max-width: 1535px) {
+  .page__img--left-bottom,
+  .page__img--right-bottom {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .jewellery__title {
+    font-size: 64px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page__img--left-top,
+  .page__img--right-top {
+    display: none;
+  }
+  .jewellery {
+    padding: 50px 0 25px 0;
+  }
+  .jewellery__title {
+    font-size: 64px;
+  }
+  .jewellery__container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .jewellery__info {
+    text-align: center;
+  }
+  .jewellery__img {
+    align-self: center;
   }
 }
