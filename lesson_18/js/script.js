@@ -6,6 +6,11 @@ console.log(openMenu);
 
 openMenu.addEventListener("click", () => {
   header.classList.toggle("open-menu");
+  if (header.classList.contains("open-menu")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "visible";
+  }
 });
 
 let btnHero = document.querySelectorAll(".hero__btn");

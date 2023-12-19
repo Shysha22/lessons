@@ -43,6 +43,7 @@ body {
 .menu {
   flex: 0 1 650px;
 }
+
 .menu__list {
   display: flex;
   justify-content: center;
@@ -493,12 +494,12 @@ body {
   text-align: center;
   line-height: 12px;
 }
-.actions-header__icon {
+.action-header__icon {
   max-width: 100%;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
-  .actions-header__icon:hover {
+  .action-header__icon:hover {
     transition: all 0.3s;
     transform: scale(1.2);
   }
