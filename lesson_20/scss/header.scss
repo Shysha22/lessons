@@ -1,0 +1,71 @@
+.header {
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    min-height: 100px;
+  }
+
+  // .header__logo
+  &__logo {
+    flex-shrink: 0;
+    color: #000;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Merriweather";
+    z-index: 5;
+  }
+
+  // .header__action
+  &__action {
+  }
+}
+.menu {
+  flex: 0 1 650px;
+  // .menu__body
+  &__body {
+  }
+
+  // .menu__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 35px;
+    position: relative;
+  }
+
+  // .menu__item
+  &__item {
+  }
+
+  // .menu__link
+  &__link {
+  }
+
+  // .menu__item--parents
+  &__item--parents {
+  }
+}
+.sub-menu {
+  // .sub-menu__list
+
+  &__list {
+  }
+
+  // .sub-menu__item
+  &__item {
+  }
+
+  // .sub-menu__link
+  &__link {
+  }
+}
+.login-link {
+}
+.icon-menu {
+}
