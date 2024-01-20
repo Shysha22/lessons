@@ -1,0 +1,108 @@
+.fashion {
+  // .fashion__container
+
+  &__container {
+    padding: 0 15px;
+    font-family: "Causten", sans-serif;
+    margin-bottom: 100px;
+    @media (max-width: 990.98px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  // .fashion__body
+
+  &__body {
+    background: url("../img/fasion/img.jpg") center / 100% 100% no-repeat;
+    position: relative;
+    padding: 180px 74px;
+    height: 100%;
+    width: 50%;
+    @media (max-width: 990.98px) {
+      text-align: center;
+      padding: 80px 10%;
+      width: 100%;
+      background: url("../img/fasion/img.jpg") center / cover no-repeat;
+    }
+  }
+
+  // .fashion__tittle
+
+  &__tittle {
+    color: #fff;
+    font-family: "Core Sans C";
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.208px;
+    margin-bottom: 30px;
+    @media (max-width: 580px) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  // .fashion__text
+
+  &__text {
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    @media (max-width: 580px) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    > p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__link {
+    padding: 12px 44px;
+    border-radius: 8px;
+    background: #fff;
+    color: #3c4242;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+    @media (max-width: 580px) {
+      padding: 10px 34px;
+      font-size: 16px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        transition: all 0.3s;
+        color: #fff;
+        background: #3c4242;
+      }
+    }
+  }
+  &__gallery-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    @media (max-width: 990.98px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 615 / 707;
+    }
+  }
+}

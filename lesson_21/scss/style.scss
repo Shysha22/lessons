@@ -1,0 +1,68 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+
+body {
+  font-family: "Causten", sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  background: #fff9f4;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1270px;
+  padding: 10px 15px;
+  margin: 0 auto;
+}
+
+//шаблони
+//коробка для активності юзера
+%user-action__item {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  transition: all 0.3s;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Core Sans C", sans-serif;
+}
+
+// --------------------header-----------------
+
+@import "_header.scss";
+
+// -------------------------main---------------
+
+.page {
+  //hero-slider
+  @import "_hero.scss";
+
+  //deals
+  @import "_deals.scss";
+
+  @import "_arrival.scss";
+
+  @import "_fashion.scss";
+
+  @import "brands.scss";
+}
+// footer
+@import "_footer.scss";
